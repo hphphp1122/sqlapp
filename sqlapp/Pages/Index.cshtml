@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Namastey</h1>
+    <div class="text-center">
+        <h1 class="display-4">
+            Following Items are available in my Shop :)
+
+            </h1>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach(var p in Model.Products)
+                {
+                    <tr>
+                        <th scope="row">@p.ProductID</th>
+                        <th scope="row">@p.ProductName</th>
+                        <th scope="row">@p.Quantity</th>
+                    </tr>
+                }
+            </tbody>
+            </table>
+
+    </div>
+</div>
